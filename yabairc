@@ -1,0 +1,42 @@
+# global settings
+yabai -m config window_placement        second_child
+yabai -m config window_topmost          off
+yabai -m config window_opacity          off
+yabai -m config window_opacity_duration 0.00
+yabai -m config active_window_opacity   1.00
+yabai -m config normal_window_opacity   0.90
+yabai -m config window_border           off
+
+# ratios
+yabai -m config split ratio             0.5
+yabai -m config auto_balance            off
+
+# mouse actions
+yabai -m config mouse_follows_focus     off
+yabai -m config focus_follows_mouse     off
+yabai -m config mouse_modifier          cmd
+yabai -m config mouse_action1           move
+yabai -m config mouse_action2           resize
+yabai -m config mouse_drop_action       swap
+
+# general space settings
+yabai -m config layout                  bsp
+yabai -m config top_padding             8
+yabai -m config bottom_padding          8
+yabai -m config left_padding            8
+yabai -m config right_padding           8
+yabai -m config window_gap              8
+
+# float system preferences
+yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Hyper$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Notes$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Logi Options$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Messages$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Command E$" sticky=on layer=above manage=off
+
+echo "yabai configuration loaded..."

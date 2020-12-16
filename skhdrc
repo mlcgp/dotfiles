@@ -1,0 +1,52 @@
+# focus window
+cmd + ctrl + alt + shift - u : yabai -m window --focus west
+cmd + ctrl + alt + shift - p : yabai -m window --focus east
+cmd + ctrl + alt + shift - i : yabai -m window --focus south
+cmd + ctrl + alt + shift - o : yabai -m window --focus north
+
+# swap window
+cmd + ctrl + alt + shift - left : yabai -m window --swap west
+cmd + ctrl + alt + shift - right : yabai -m window --swap east
+cmd + ctrl + alt + shift - up : yabai -m window --swap north
+cmd + ctrl + alt + shift - down : yabai -m window --swap south
+
+# balance size of windows
+cmd + ctrl + alt + shift - x : yabai -m space --balance
+
+# rotate tree
+cmd + ctrl + alt + shift - r : yabai -m space --rotate 90
+
+# toggle window fullscreen
+cmd + ctrl + alt + shift - f : yabai -m window --toggle zoom-fullscreen
+
+# make floating window fill screen
+cmd + ctrl + alt + shift - g : yabai -m window --grid 1:1:0:0:1:1
+
+# float / unfloat window and center on screen
+cmd + ctrl + alt + shift - c : yabai -m window --toggle float;\
+          yabai -m window --grid 5:5:1:1:3:3
+
+# toggle sticky, float
+cmd + ctrl + alt + shift - v : yabai -m window --toggle sticky
+cmd + ctrl + alt + shift - b : yabai -m window --toggle float
+
+# move to top left of grid
+cmd + ctrl + alt + shift - q : yabai -m window --grid 2:2:0:0:1:1
+# move to bottom left of grid
+cmd + ctrl + alt + shift - a : yabai -m window --grid 2:2:0:1:1:1
+# move to top right of grid
+cmd + ctrl + alt + shift - e : yabai -m window --grid 2:2:1:0:1:1
+# move to bottom right of grid
+cmd + ctrl + alt + shift - d : yabai -m window --grid 2:2:1:1:1:1
+
+# change layout
+cmd + ctrl + alt + shift - m : yabai -m space --layout bsp
+cmd + ctrl + alt + shift - n : yabai -m space --layout float
+
+#layers
+cmd + ctrl + alt + shift - w : yabai -m window --layer above
+cmd + ctrl + alt + shift - s : yabai -m window --layer below
+alt - n : yabai -m window --layer normal
+
+# quick restart yabai
+ctrl + alt + cmd - y : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
